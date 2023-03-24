@@ -1,0 +1,13 @@
+{
+    "totem.information": "Informações <br/> do totem",
+    "sensor.real": "(sensor real)",
+    "sensor.virtual": "(sensor virtual)",
+    "firedetector.flame": "Chama",
+    "firedetector.detected": "detectada",
+    "firedetector.no.detected": "não detectada",
+    "firedetector.humidity": "Umidade",
+    "firedetector.temperature": "Temperatura",
+    "smartmeter.appliances": "APARELHOS",
+    "smartmeter.name": "MEDIDOR",
+    "smartmeter.overall.consumption": "CONSUMO GERAL"
+}

@@ -1,0 +1,66 @@
+<div class="row" style="margin-top: 35px;">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-2 top-bar">
+				<img src="images/ref_logo.png" />
+			</div>
+			<div class="col-sm-8 top-bar">
+				<span class="title">TOTEM {{appName}}</span>
+			</div>
+			<div class="col-sm-2 right" style="margin-top: -10px;">
+				<language></language>
+				<!--<img src="images/loading.gif" style="padding-top: 50px;" />-->
+			</div>
+		</div>
+		<div class="row sensor-info text-center" style="padding-top: 15px;">
+			<div class="col-sm-3" style="padding-left: 50px;">
+				<flame-detection-virtual></flame-detection-virtual>
+				<flame-detection-real></flame-detection-real>
+			</div>
+
+			<div class="col-sm-5" style="margin-top: -25px;">
+				<div class="row">
+					<div class="col-sm-4">
+						<div *ngIf="virtualTemperature.data >= 30">
+							<img src="images/ic_temp_red.png" style="padding-top: 50px; float: right;" />
+						</div>
+						<div *ngIf="virtualTemperature.data > 10 && virtualTemperature.data < 30">
+							<img src="images/ic_temp_blue.png" style="padding-top: 50px; float: right;" />
+						</div>
+						<div *ngIf="virtualTemperature.data <= 10">
+							<img src="images/ic_temp_white.png" style="padding-top: 50px; float: right;" />
+						</div>
+					</div>
+					<div class="col-sm-6" style="margin-top: 40px;">
+						<temperature-virtual></temperature-virtual>
+						<div style="padding-top: 10px;">
+							<temperature-real></temperature-real>
+						</div>
+					</div>
+				</div>
+				<div class="row" style="padding-top: 40px;">
+					<div class="col-sm-4">
+						<div>
+							<img src="images/ic_umi.png" style="padding-top: 50px; float: right;" />
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<humidity-virtual></humidity-virtual>						
+						<div style="padding-top: 10px;">
+							<humidity-real></humidity-real>
+						</div>
+					</div>
+				</div>				
+			</div>
+			
+			<div class="col-sm-4" style="margin-left: -30px; padding-top: 20px;">
+				<webcam></webcam>
+			</div>
+
+			<!-- <div class="col-sm-6">
+				<consumption></consumption>
+			</div> -->	
+		</div>
+		
+	</div>
+</div>

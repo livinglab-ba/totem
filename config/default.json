@@ -1,0 +1,9 @@
+{
+	"broker_user": "guest",
+	"broker_password": "guest",
+	"broker_address": "127.0.0.1",
+	"firedetection_virtual_topic": "livinglab.sensor.firedetector.raw.virtual.raspberrypiVirtual1",
+	"firedetection_real_topic": "livinglab.sensor.firedetector.raw.real.raspberrypiReal1",
+	"smartmeter_raw_topic": "livinglab.sensor.smartmeter.raw.virtual.tj-virtual-meter-andar1",
+	"hive_webcam_totem_topic": "livinglab.sensor.hive.raw.real.webcam-totem-tecnocentro"
+}

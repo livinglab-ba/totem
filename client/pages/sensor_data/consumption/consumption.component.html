@@ -1,0 +1,45 @@
+<div class="container smart-meters">
+    <div *ngIf="newData">
+        <div class="row">
+            <div class="row">
+                <div class="col-sm-1" style="text-align: right;">
+                    <img class="d-block w-100" src="images/ic_sm.png">
+                </div>
+                <div class="col-sm-6" style="text-align: left;">
+                    <span class="appliance-consumption">{{"smartmeter.name" | translate}}: {{smartMeterName}}</span> <br/>
+                    <span class="appliances-amount">{{numberOfAppliances}} {{"smartmeter.appliances" | translate}}</span>
+                </div>
+                <div class="col-sm-5" style="text-align: right;">
+                    <span class="appliance-consumption">{{totalConsumption}} W</span><br/>
+                    <span class="appliances-amount">{{"smartmeter.overall.consumption" | translate}}</span>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="padding-top: 50px;">
+            <ngx-carousel
+                [inputs]="carousel"
+                    (carouselLoad)="myfunc($event)">
+                  <ngx-item NgxCarouselItem *ngFor="let page of data">
+                        <div class="row" *ngFor="let row of page">
+                            <div class="col-sm-6" *ngFor="let appliance of row">
+                                <div class="row"  style="padding-top: 20px; padding-bottom: 20px;">
+                                    <div class="col-sm-4">
+                                        <img class="d-block w-100" src="images/ic_appliance.png">
+                                    </div>
+                                    <div class="col-sm-8" style="text-align: left;">
+                                        <span class="appliance-name">{{appliance.label}}</span> <br/>
+                                        <span class="appliance-consumption">
+                                            <div *ngIf="appliance.turnOn; else elseBlock">{{appliance.powerInWatts}}W</div>
+                                            <ng-template #elseBlock>0W</ng-template>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                  </ngx-item>
+                  <button NgxCarouselPrev class='leftRs'></button>
+                  <button NgxCarouselNext class='rightRs'></button>
+            </ngx-carousel>
+        </div>
+    </div>
+</div>
