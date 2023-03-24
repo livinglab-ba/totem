@@ -42,7 +42,7 @@ app.listen(app.get('port'), function() {
 // Instantiating the web socket (port 8000) - server side
 var http = require('http').createServer(app);
 var io = require('socket.io').listen(http);
-http.listen(8000);
+http.listen(4060);
 
 // Starting communication with the message broker
 var applicationManager = new ApplicationManager();

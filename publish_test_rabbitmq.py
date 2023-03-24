@@ -13,8 +13,8 @@ def gerarDados():
 # credentials = pika.PlainCredentials(username='livinglab', password='livinglab')
 # connection = pika.BlockingConnection(pika.ConnectionParameters(host='10.146.42.210', credentials=credentials))
 
-credentials = pika.PlainCredentials(username='guest', password='guest')
-connection = pika.BlockingConnection(pika.ConnectionParameters(host='127.0.0.1', credentials=credentials))
+credentials = pika.PlainCredentials(username='livinglab', password='livinglab')
+connection = pika.BlockingConnection(pika.ConnectionParameters(host='10.146.42.210', credentials=credentials))
 
 channel = connection.channel()
 

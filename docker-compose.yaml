@@ -1,0 +1,18 @@
+version: '3'
+services:
+  rabbitmq:
+    image: 'rabbitmq:3-management'
+    restart: always
+    environment:
+     RABBITMQ_DEFAULT_USER: "livinglab"
+     RABBITMQ_DEFAULT_PASS: "livinglab"
+    command: "/bin/bash -c \"rabbitmq-plugins enable rabbitmq_mqtt; rabbitmq-server\""
+    ports:
+    - '15672:15672'
+    - '5672:5672'
+    - '1883:1883'
+  totem-tecnocentro1:
+   image: totem-tecnocentro1
+   restart: always
+   ports:
+     - 4060:4060

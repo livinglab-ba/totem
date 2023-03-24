@@ -1,7 +1,7 @@
 {
-	"broker_user": "guest",
-	"broker_password": "guest",
-	"broker_address": "127.0.0.1",
+	"broker_user": "livinglab",
+	"broker_password": "livinglab",
+	"broker_address": "10.146.42.210",
 	"firedetection_virtual_topic": "livinglab.sensor.firedetector.raw.virtual.raspberrypiVirtual1",
 	"firedetection_real_topic": "livinglab.sensor.firedetector.raw.real.raspberrypiReal1",
 	"smartmeter_raw_topic": "livinglab.sensor.smartmeter.raw.virtual.tj-virtual-meter-andar1",
