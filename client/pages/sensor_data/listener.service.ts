@@ -12,7 +12,7 @@ export class ListenerService {
 	/**
 	 * Constant to be configured according to the totem test or staging servers
 	 */
-	readonly totemSocketAddress: string = "10.146.42.210";
+	readonly totemSocketAddress: string = "10.146.42.12";
 
 	/**
 	 * Web socket used by the client side
@@ -93,7 +93,7 @@ export class ListenerService {
 	 * This method is responsible for instatiating and configuring the web socket object in the client side
 	 */
 	startListening(): void {
-		this.socket = io("http://" + this.totemSocketAddress + ":4060");
+		this.socket = io("http://" + this.totemSocketAddress + ":8000");
 		this.socket.emit('start', '');
 		
 		this.socket.on('temperature-virtual', function(data:any){
