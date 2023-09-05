@@ -1,10 +1,10 @@
 <div style="padding-top: 30px;">
     <div *ngIf="data" class="chama-detectada">
-        <div class="row text-center">
+        <div class="row text-center" style="height: 180px;">
             <div class="col-md-4">
-                <img src="images/ic_flame_big_yes.png"/>
+                <img src="images/ic_flame_big_yes.png"style="padding-top: 35px;"/>
             </div>
-            <div class="col-md-8">
+            <div class="col-md-8" style="padding-top: 35px;">
                 <span style="font-size: 18pt;">{{"firedetector.flame" | translate}}</span> <br/>
                 <span style="font-size: 18pt;">{{"firedetector.detected" | translate}}</span> <br/>
                 <span style="font-size: 18pt;">{{"sensor.virtual" | translate}}</span>
@@ -12,11 +12,11 @@
         </div>
     </div>
     <div *ngIf="!data" class="chama-nao-detectada">
-        <div class="row text-center">
-            <div class="col-md-4">
-                <img src="images/ic_flame_big_no.png"/>
+        <div class="row text-center" style="height: 180px;">
+            <div class="col-md-4" >
+                <img src="images/ic_flame_big_no.png"style="padding-top: 35px;"/>
             </div>
-            <div class="col-md-8">
+            <div class="col-md-8" style="padding-top: 35px;">
                 <span style="font-size: 18pt;">{{"firedetector.flame" | translate}}</span> <br/>
                 <span style="font-size: 18pt;">{{"firedetector.no.detected" | translate}}</span> <br/>
                 <span style="font-size: 18pt;">{{"sensor.virtual" | translate}}</span>
