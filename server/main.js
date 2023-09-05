@@ -10,7 +10,7 @@ var path = require("path");
 var app = express();
 var ApplicationManager = require("./api/ApplicationManager");
 
-app.set('port', (process.env.PORT || 3000));
+app.set('port', (process.env.PORT || 3003));
 
 app.use('/', express.static(__dirname + '/../dist'));
 app.use('/scripts', express.static(__dirname + '/../node_modules'));
